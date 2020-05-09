@@ -4,27 +4,23 @@ namespace ConsoleApplication1
 {
     public class Damage
     {
-        private Human _human;
-        private Alians _alians;
-        private Animals _animals;
         
-        public void AlianGotHit(Guns g)
+        public void AlianGotHit(Guns g , Alians a)
         {
-            Console.WriteLine(_alians.Health);
-            // _alians.Health -= g.addAD();
+            a.Health -= g.addAD();
         }
         
-        public void HumenGotHit()
+        public void HumenGotHit(Alians a , Human h)
         {
-            if (_human.Health > 0)
+            if (h.Health > 0)
             {
-                _human.Health -= _alians.attackDamage;
+                h.Health -= a.attackDamage;
             }
         }
         
-        public void AnimalGotHit(Guns g)
+        public void AnimalGotHit(Guns g , Animals a)
         {
-            _animals.Health -= g.addAD();
+            a.Health -= g.addAD();
         }
     }
 }

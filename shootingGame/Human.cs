@@ -5,10 +5,8 @@ namespace ConsoleApplication1
 {
     public class Human
     {
-        private int _gunDamage;
         private bool _visible = true;
         private int _moneyBox = 0;
-        private Alians _alians;
 
         public int Health { get; set; }
 
@@ -16,7 +14,7 @@ namespace ConsoleApplication1
         {
             this.Health = health;
         }
-
+        
         public void visibility()
         {
             if (Health <= 0)

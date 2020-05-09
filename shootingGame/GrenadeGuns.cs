@@ -11,13 +11,11 @@ namespace ConsoleApplication1
 
         public override int addAD()
         {
-            Console.WriteLine("Grenade Damage is :");
             return ad;
         }
 
         public override int addCost()
         {
-            Console.WriteLine("Grenade Cost is :");
             return cost;
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsoleApplication1
 {
-    public class Guns
+    public abstract class Guns
     {
         protected int ad;
         protected int cost;
@@ -14,14 +14,8 @@ namespace ConsoleApplication1
             cost = GunCost;
         }
 
-        public virtual int addAD()
-        {
-            Console.WriteLine("ss");
-            return 0;
-        }
-        public virtual int addCost()
-        {
-            return 0;
-        }
+        public abstract int addAD();
+
+        public abstract int addCost();
     }
 }

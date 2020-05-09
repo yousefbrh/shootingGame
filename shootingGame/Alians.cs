@@ -1,6 +1,7 @@
 ﻿﻿using System;
+ using shootingGame;
 
-namespace ConsoleApplication1
+ namespace ConsoleApplication1
 {
     public class Alians
     {

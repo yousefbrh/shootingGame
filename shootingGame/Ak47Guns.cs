@@ -12,13 +12,11 @@ namespace shootingGame
 
         public override int addAD()
         {
-            Console.WriteLine("Ak47 Damage is :");
             return ad;
         }
 
         public override int addCost()
         {
-            Console.WriteLine("Ak47 Cost is :");
             return cost;
         }
 
