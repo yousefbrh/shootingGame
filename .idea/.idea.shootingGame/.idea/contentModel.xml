@@ -10,10 +10,10 @@
         <e p="Alians.cs" t="Include" />
         <e p="Animals.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Damage.cs" t="Include" />
         <e p="GrenadeGuns.cs" t="Include" />
         <e p="Guns.cs" t="Include" />
         <e p="Human.cs" t="Include" />
+        <e p="LivingThing.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

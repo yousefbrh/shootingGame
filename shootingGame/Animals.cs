@@ -1,25 +1,38 @@
 ﻿﻿using System;
+ using shootingGame;
 
-namespace ConsoleApplication1
+ namespace ConsoleApplication1
 {
-    public class Animals
+    public class Animals : LivingThing
     {
         private bool visible;
         private int value;
         private Human _human;
 
-        public int Health { get; set; }
-        
-        public Animals(bool visible , int health , int value)
+        public override int showHealth()
+        {
+            return health;
+        }
+
+        public override int showAttackDamage()
+        {
+            return attackDamage = 0;
+        }
+
+        public override void damage(LivingThing attacker)
+        {
+            health -= attacker.showAttackDamage();
+        }
+
+        public Animals(bool visible, int value, int health = 0) : base(health)
         {
             this.visible = visible;
-            Health = health;
             this.value = value;
         }
         
         public void visibility()
         {
-            if (Health <= 0 && visible == true)
+            if (health <= 0 && visible == true)
             {
                 visible = false;
             }
@@ -27,7 +40,7 @@ namespace ConsoleApplication1
         
         public void moneyTransfer()
         {
-            if (Health <= 0)
+            if (health <= 0)
             {
                 _human.addMoney(value);
             }

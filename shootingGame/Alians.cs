@@ -3,35 +3,44 @@
 
  namespace ConsoleApplication1
 {
-    public class Alians
+    public class Alians : LivingThing
     {
         private bool _visible = true;
         private int _value;
         private Human _human;
-        
-        public int Health { get; set; }
-        public int attackDamage { get; set; }
-        public Alians(int health , int attackDamage , int value)
+
+        public override int showHealth()
         {
-            this.attackDamage = attackDamage;
-            Health = health;
-            this._value = value;
+            return health;
         }
 
+        public override int showAttackDamage()
+        {
+            return attackDamage;
+        }
+
+        public Alians(int value , int health = 0 , int attackDamage = 0) : base(health , attackDamage)
+        {
+            this._value = value;
+        }
         public void visibility()
         {
-            if (Health <= 0)
+            if (health <= 0)
             {
                 _visible = false;
             }
         }
-
         public void moneyTransfer()
         {
-            if (Health <= 0)
+            if (health <= 0)
             {
                 _human.addMoney(_value);
             }
+        }
+
+        public override void damage(LivingThing attacker)
+        {
+            health -= attacker.showAttackDamage();
         }
     }
 }

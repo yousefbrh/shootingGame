@@ -41,10 +41,10 @@
     <Compile Include="Ak47Guns.cs" />
     <Compile Include="Alians.cs" />
     <Compile Include="Animals.cs" />
-    <Compile Include="Damage.cs" />
     <Compile Include="GrenadeGuns.cs" />
     <Compile Include="Guns.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="LivingThing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
