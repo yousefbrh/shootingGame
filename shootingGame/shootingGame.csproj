@@ -38,11 +38,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ak47Guns.cs" />
+    <Compile Include="Ak47Gun.cs" />
     <Compile Include="Alians.cs" />
     <Compile Include="Animals.cs" />
     <Compile Include="Fight.cs" />
-    <Compile Include="GrenadeGuns.cs" />
+    <Compile Include="GrenadeGun.cs" />
     <Compile Include="Guns.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="LivingThing.cs" />

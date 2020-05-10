@@ -8,19 +8,19 @@
         private bool visible;
         
         public int value;
-        public override int showHealth()
+        public override int GetHealth()
         {
             return health;
         }
 
-        public override int showAttackDamage()
+        public override int GetAttackDamage()
         {
             return attackDamage = 0;
         }
 
-        public override void damage(LivingThing attacker)
+        public override void Damage(LivingThing attacker)
         {
-            health -= attacker.showAttackDamage();
+            health -= attacker.GetAttackDamage();
         }
 
         public Animals(bool visible, int value, int health = 0) : base(health)

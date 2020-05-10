@@ -6,12 +6,12 @@
     public class Alians : LivingThing
     {
         public int value;
-        public override int showHealth()
+        public override int GetHealth()
         {
             return health;
         }
 
-        public override int showAttackDamage()
+        public override int GetAttackDamage()
         {
             return attackDamage;
         }
@@ -21,9 +21,9 @@
             this.value = value;
         }
 
-        public override void damage(LivingThing attacker)
+        public override void Damage(LivingThing attacker)
         {
-            health -= attacker.showAttackDamage();
+            health -= attacker.GetAttackDamage();
         }
 
         ~Alians()

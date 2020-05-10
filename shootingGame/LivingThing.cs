@@ -11,8 +11,8 @@
             this.attackDamage = attackDamage;
         }
 
-        public abstract int showHealth();
-        public abstract int showAttackDamage();
-        public abstract void damage(LivingThing attacker);
+        public abstract int GetHealth();
+        public abstract int GetAttackDamage();
+        public abstract void Damage(LivingThing attacker);
     }
 }

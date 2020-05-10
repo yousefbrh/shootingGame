@@ -5,17 +5,17 @@ namespace ConsoleApplication1
 {
     public abstract class Guns
     {
-        protected int ad;
-        protected int cost;
+        protected int gunDamage;
+        protected int price;
 
-        public Guns(int AttackDamage = 0 , int GunCost = 0)
+        public Guns(int gunDamage = 0 , int gunPrice = 0)
         {
-            ad = AttackDamage;
-            cost = GunCost;
+            this.gunDamage = gunDamage;
+            this.price = gunPrice;
         }
 
-        public abstract int addAD();
+        public abstract int GetGunDamage();
 
-        public abstract int addCost();
+        public abstract int GetGunPrice();
     }
 }
