@@ -6,9 +6,8 @@
     public class Animals : LivingThing
     {
         private bool visible;
-        private int value;
-        private Human _human;
-
+        
+        public int value;
         public override int showHealth()
         {
             return health;
@@ -29,21 +28,11 @@
             this.visible = visible;
             this.value = value;
         }
-        
-        public void visibility()
+
+        ~Animals()
         {
-            if (health <= 0 && visible == true)
-            {
-                visible = false;
-            }
-        }
-        
-        public void moneyTransfer()
-        {
-            if (health <= 0)
-            {
-                _human.addMoney(value);
-            }
+            visible = false;
+            Console.WriteLine("animal died");
         }
     }
 }

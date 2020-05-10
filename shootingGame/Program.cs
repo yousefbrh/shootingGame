@@ -12,14 +12,17 @@ namespace ConsoleApplication1
             Human human = new Human(ak47,2500);
             Alians alians = new Alians(25,1500,50);
             Animals animals = new Animals(true,10, 300);
-            alians.damage(human);
-            alians.damage(human);
-            animals.damage(human);
-            human.damage(alians);
-            Console.WriteLine(alians.showAttackDamage());
-            Console.WriteLine(alians.showHealth());
-            Console.WriteLine(human.showHealth());
-            Console.WriteLine(animals.showHealth());
+            Fight fight = new Fight(human,alians,animals);
+            if (alians.showHealth() <= 0)
+            {
+                human.addMoney(alians.value);
+            }
+
+            if (animals.showHealth() <= 0)
+            {
+                human.addMoney(animals.value);
+            }
+            Console.WriteLine("human money is :" + human.moneyBox);
         }
     }
 }

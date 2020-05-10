@@ -5,10 +5,7 @@
 {
     public class Alians : LivingThing
     {
-        private bool _visible = true;
-        private int _value;
-        private Human _human;
-
+        public int value;
         public override int showHealth()
         {
             return health;
@@ -21,26 +18,17 @@
 
         public Alians(int value , int health = 0 , int attackDamage = 0) : base(health , attackDamage)
         {
-            this._value = value;
-        }
-        public void visibility()
-        {
-            if (health <= 0)
-            {
-                _visible = false;
-            }
-        }
-        public void moneyTransfer()
-        {
-            if (health <= 0)
-            {
-                _human.addMoney(_value);
-            }
+            this.value = value;
         }
 
         public override void damage(LivingThing attacker)
         {
             health -= attacker.showAttackDamage();
+        }
+
+        ~Alians()
+        {
+            Console.WriteLine("alian died");
         }
     }
 }

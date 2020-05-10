@@ -7,7 +7,8 @@ using System.Data.SqlTypes;
     public class Human : LivingThing
     {
         private bool _visible = true;
-        private int _moneyBox = 0;
+        
+        public int moneyBox = 0;
 
         public int tempAD;
         public override int showHealth()
@@ -36,7 +37,7 @@ using System.Data.SqlTypes;
 
         public void addMoney(int money)
         {
-            _moneyBox += money;
+            moneyBox += money;
         }
 
         public override void damage(LivingThing attacker)
