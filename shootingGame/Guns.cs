@@ -14,8 +14,14 @@ namespace ConsoleApplication1
             this.price = gunPrice;
         }
 
-        public abstract int GetGunDamage();
+        public int GetGunDamage()
+        {
+            return gunDamage;
+        }
 
-        public abstract int GetGunPrice();
+        public int GetGunPrice()
+        {
+            return price;
+        }
     }
 }

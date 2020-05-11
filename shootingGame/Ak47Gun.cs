@@ -10,15 +10,5 @@ namespace shootingGame
             
         }
 
-        public override int GetGunDamage()
-        {
-            return gunDamage;
-        }
-
-        public override int GetGunPrice()
-        {
-            return price;
-        }
-
     }
 }

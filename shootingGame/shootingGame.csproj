@@ -41,7 +41,6 @@
     <Compile Include="Ak47Gun.cs" />
     <Compile Include="Alians.cs" />
     <Compile Include="Animals.cs" />
-    <Compile Include="Fight.cs" />
     <Compile Include="GrenadeGun.cs" />
     <Compile Include="Guns.cs" />
     <Compile Include="Human.cs" />

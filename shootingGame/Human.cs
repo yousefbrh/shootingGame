@@ -7,16 +7,15 @@ using System.Data.SqlTypes;
     public class Human : LivingThing
     {
         public int moneyBox = 0;
-
         public int tempAD;
         public override int GetHealth()
         {
             return health;
         }
 
-        public Human(Guns g , int health = 0) : base(health)
+        public Human(int health = 0) : base(health)
         {
-            tempAD = g.GetGunDamage();
+            
         }
         
         public override int GetAttackDamage()

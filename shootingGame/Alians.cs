@@ -28,7 +28,7 @@
 
         ~Alians()
         {
-            Console.WriteLine("alian died");
+            
         }
     }
 }

@@ -5,8 +5,7 @@
 {
     public class Animals : LivingThing
     {
-        private bool visible;
-        
+        public bool visible;
         public int value;
         public override int GetHealth()
         {
@@ -23,16 +22,18 @@
             health -= attacker.GetAttackDamage();
         }
 
-        public Animals(bool visible, int value, int health = 0) : base(health)
+        public Animals(int value, int health = 0) : base(health)
         {
-            this.visible = visible;
             this.value = value;
         }
 
+        public void Animalappearance(bool shit)
+        {
+            visible = shit;
+        }
         ~Animals()
         {
-            visible = false;
-            Console.WriteLine("animal died");
+            
         }
     }
 }

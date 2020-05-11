@@ -9,15 +9,6 @@ namespace ConsoleApplication1
             
         }
 
-        public override int GetGunDamage()
-        {
-            return gunDamage;
-        }
-
-        public override int GetGunPrice()
-        {
-            return price;
-        }
-
+        
     }
 }
