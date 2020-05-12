@@ -32,5 +32,6 @@ using System.Data.SqlTypes;
         {
             health -= attacker.GetAttackDamage();
         }
+        
     }
 }

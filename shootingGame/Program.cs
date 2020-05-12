@@ -15,6 +15,7 @@ namespace ConsoleApplication1
             Human human = new Human(2500);
             Alians alian = new Alians(25,1500,50);
             Animals animal = new Animals(10, 300);
+            Move move = new Move();
             
             Console.WriteLine("Welcome to this Shitty Game");
             Console.WriteLine("These are the Character :");
@@ -183,7 +184,47 @@ namespace ConsoleApplication1
                             }
                             break;
                         case 2 when chooseGetAttacked == 1 :
-                            human.Damage(alian);
+                            Console.WriteLine("There's a bullet coming to you");
+                            Console.WriteLine("Do you want to dodge? :DDDDD  (enter yes to dodge or any word for stay)");
+                            string dodge = Console.ReadLine();
+                            if (dodge == "yes")
+                            {
+                                if (move.position != 1 && move.position != -1)
+                                {
+                                    Console.WriteLine("Want to go right or left?");
+                                    string dodgeWay = Console.ReadLine();
+                                    if (dodgeWay == "right")
+                                    {
+                                        move.right();
+                                    }
+                                    else if (dodgeWay == "left")
+                                    {
+                                        move.left();
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("invalid input!!");
+                                        Console.WriteLine("by default we move human to right!");
+                                        move.right();
+                                    }
+                                }
+                                else if (move.position == 1)
+                                {
+                                    Console.WriteLine("There is no space for moving right!");
+                                    Console.WriteLine("we will move human to left!");
+                                    move.left();
+                                }
+                                else if (move.position == -1)
+                                {
+                                    Console.WriteLine("There is no space for moving left!");
+                                    Console.WriteLine("we will move human to right!");
+                                    move.right();
+                                }
+                            }
+                            else
+                            {
+                                human.Damage(alian);
+                            }
                             if (human.GetHealth() <= 0)
                             {
                                 Console.WriteLine("Human Died!!!!!");                        
